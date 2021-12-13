@@ -24,9 +24,25 @@ export default class Inicio extends Component{
       return (
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
 
+                    <Text >Seja Bem-vindo(a)</Text>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+
+        <FAB
+    style={styles.fab}
+    color='#3562c4'
+    icon="camera"
+    
+    
+    onPress={() => console.log('Pressed')}
+  /> 
 
 
-            <Text>a</Text>
+
+
+            </View>
+           
+
+
    
  
 
@@ -168,6 +184,48 @@ export default class Inicio extends Component{
 
 
         </ScrollView>
+
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+
+
+        <FAB
+    style={styles.fab}
+    color='#3562c4'
+    icon="help"
+    
+    
+    onPress={() => console.log('Pressed')}
+         /> 
+         <FAB
+            style={styles.fab}
+            color='#3562c4'
+            icon="map"
+            onPress={() => console.log('Pressed')}
+            />
+
+
+
+        <FAB
+            style={styles.fab}
+            color="#3562c4"
+            icon="clock-time-nine"
+    
+             onPress={() => console.log('Pressed')}
+            />
+
+
+
+
+
+
+
+
+
+
+
+
+        </View>
 
 
 

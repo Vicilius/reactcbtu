@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, ScrollView, Image} from 'react-native';
 import { Dimensions, StyleSheet } from 'react-native';
 import { Card, Title,Button, ProgressBar, Colors } from 'react-native-paper';
+import { Badge } from 'react-native-paper';
 
 
 import { Paragraph } from 'react-native-paper';

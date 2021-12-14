@@ -198,13 +198,13 @@ export default class Inicio extends Component{
     icon="help"
     
     
-    onPress={() => console.log('Pressed')}
+    onPress={() => navigation.navigate('Ajuda') }
          /> 
          <FAB
             style={styles.fab}
             color='#3562c4'
             icon="map"
-            onPress={() => console.log('Pressed')}
+            onPress={() => navigation.navigate('Estacoes') }
             />
 
 
@@ -214,7 +214,7 @@ export default class Inicio extends Component{
             color="#3562c4"
             icon="clock-time-nine"
     
-             onPress={() => console.log('Pressed')}
+             onPress={() => navigation.navigate('Horario') }
             />
 
 
@@ -226,14 +226,17 @@ export default class Inicio extends Component{
 
 
 
+        </View>
+
+        <View style={{alignItems: 'center', justifyContent: 'center'}}>
+
+        <Button title="Ir para as Linhas" onPress={() => navigation.navigate('Linhas')}/>
 
 
         </View>
 
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Button title="Ir para as Linhas" onPress={() => navigation.navigate('Linhas')}/>
-        </View>
 
+       
 
 
 
@@ -255,6 +258,13 @@ export default class Inicio extends Component{
       );
   }
 }
+
+
+
+
+
+
+
     
 const styles = StyleSheet.create({
     

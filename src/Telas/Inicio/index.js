@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, Image} from 'react-native';
 import { Dimensions, StyleSheet } from 'react-native';
-import { Card, Title,Button, ProgressBar, Colors } from 'react-native-paper';
+import { Card, Title,ProgressBar, Colors } from 'react-native-paper';
 import { Badge } from 'react-native-paper';
-
-
+import 'react-native-gesture-handler';
+import { Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Paragraph } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
 
 import { Divider } from 'react-native-elements';
 
 import { FAB } from 'react-native-paper';
-
+import { createStackNavigator } from '@react-navigation/stack';
 
 const {width} = Dimensions.get("screen") ;
 const height = 500; //60%
@@ -227,6 +229,12 @@ export default class Inicio extends Component{
 
 
         </View>
+
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <Button title="Ir para as Linhas" onPress={() => navigation.navigate('Linhas')}/>
+        </View>
+
+
 
 
 

@@ -27,7 +27,7 @@ export default class Inicio extends Component{
       return (
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
 
-                    <Text >Seja Bem-vindo(a)</Text>
+                    <Text style={styles.font}>Seja Bem-vindo(a)</Text>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 
         <FAB
@@ -281,7 +281,10 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         resizeMode: 'stretch'
-      }
+      },
+    font: {
+        fontWeight: 'bold'  
+    }
     
   });
 

@@ -62,7 +62,8 @@ const bull = (
         </Typography>
         <CardMedia
         component="img"
-        height="200"
+        height="220"
+        weight="150"
         image="assets\1984.png"
         
       />
@@ -87,6 +88,44 @@ const bull = (
 
     </React.Fragment>
   );
+
+
+  const card2 = (
+    <React.Fragment>
+      <CardContent style={{borderRadius: 25}}>
+       
+        <Typography variant="h5" component="div">
+        Missão
+        </Typography>
+        <CardMedia
+        component="img"
+        height="220"
+        weight="150"
+        image="assets\1984.png"
+        
+      />
+
+
+
+       
+      </CardContent>
+      <Divider>
+      <CardActions>
+        <Link href="https://www.cbtu.gov.br/index.php/pt/a-cbtu/a-companhia/missao-visao-valores-objetivos" color="inherit" underline="none">Acessar o site</Link>
+      
+        
+      </CardActions>
+      </Divider>
+
+
+      
+
+
+
+
+    </React.Fragment>
+  );
+
 
 
 
@@ -142,7 +181,7 @@ export default class Inicio extends Component{
         <View style={{width, height}}>
        {/* <ProgressBar progress={1} color={Colors.red800} />*/}
 
-      {/*  <ScrollView  pagingEnabled horizontal style={{borderRadius: 15}}> */ }
+       <ScrollView  pagingEnabled horizontal style={{borderRadius: 15}}> 
 
         
 
@@ -173,6 +212,12 @@ export default class Inicio extends Component{
 
         </View>
 
+        <View>
+        <Box sx={{ minWidth: 275 }}>
+      <Card variant="outlined">{card2}</Card>
+    </Box>
+        </View>
+
 
 
 
@@ -187,7 +232,7 @@ export default class Inicio extends Component{
 
 
 
-      {/*  </ScrollView> */}
+      </ScrollView> 
 
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>

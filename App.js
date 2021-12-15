@@ -4,14 +4,16 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Card,  Avatar, Title, Paragraph } from 'react-native-paper';
+import { Card, Title, Paragraph } from 'react-native-paper';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Appbar } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors'
 
 
 const Tab = createBottomTabNavigator();
@@ -43,7 +45,8 @@ function MyTabs() {
   return (
     <Tab.Navigator>
      
-      <Tab.Screen name="Inicio" component={Inicio} />
+    
+     <Tab.Screen name="Inicio" component={Inicio} />
       <Tab.Screen name="Perfil" component={Perfil} />
       <Tab.Screen name="Ajuda" component={Ajuda} />
       <Tab.Screen name="Horário" component={Horario} />
@@ -63,6 +66,7 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
     <Drawer.Navigator>
+     
       <Drawer.Screen name="Início" component={Inicio}
       options={{
         
@@ -76,7 +80,9 @@ function MyDrawer() {
               ),
         }}
 
+      
         />
+        
      
       <Drawer.Screen name="Perfil" component={Perfil} 
       options={{
@@ -239,26 +245,7 @@ function MyDrawer() {
 
 
 
-<Drawer.Screen name="teste" component={teste} 
-      
-      
-      options={{
-        title: 'Teste',
-        drawerIcon: ({focused, size}) => (
-           <Ionicons
-              name="add-circle-outline"
-              size={size}
-              color={focused ? '#4c8a36' : '#ccc'} 
-              />
 
-              ),
-        }}
-
-      
-      
-      
-      
-      />
 
 
 

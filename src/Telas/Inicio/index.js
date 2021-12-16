@@ -160,15 +160,24 @@ export default class Inicio extends Component{
         
           
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{width: '100%'}}>
+          <Box component="span" sx={{display: 'block', p: 1, m: 1,}}>
 
+          
+        
                     <Text style={styles.font}>Seja Bem-vindo(a)</Text>
+                    </Box>
+                    </div>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        
+       
 
 
 
        
 
-
+       
+        
 
 
             </View>
@@ -183,32 +192,15 @@ export default class Inicio extends Component{
 
 
         <View style={{width, height}}>
-       {/* <ProgressBar progress={1} color={Colors.red800} />*/}
+       
 
     {/*   <ScrollView  pagingEnabled horizontal style={{borderRadius: 15}}>  */}
 
         
 
         <View>
-{/*
-         <Card style={styles.card} mode='outlined'> 
-       <Card.Title></Card.Title> 
-       <Card.Content> 
-          <Title><Ionicons name="newspaper" style={styles.icon} size={20}></Ionicons>Cartao</Title> 
-           
-        </Card.Content>
-        <Card.Cover source={{ uri: 'https://www.cbtu.gov.br/images/banners/slide1.jpg'}}
-        style={{width, height, resizeMode: 'cover' }}
-        style={{width, height}} ></Card.Cover>
-    
-            
 
-        </Card> 
-*/}
-
-        
-
-<Box sx={{ minWidth: 275 }}>
+        <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
     </Box>
         

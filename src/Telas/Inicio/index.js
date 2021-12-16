@@ -34,10 +34,8 @@ import Container from '@mui/material/Container';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import SubwayIcon from '@mui/icons-material/Subway';
 import InfoIcon from '@mui/icons-material/Info';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+
+
 
 
 import { Divider } from 'react-native-elements';
@@ -149,10 +147,7 @@ export default class Inicio extends Component{
     
   render () {
 
-    <link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-/>
+    
 
 
       return (

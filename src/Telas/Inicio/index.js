@@ -34,6 +34,7 @@ import Container from '@mui/material/Container';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import SubwayIcon from '@mui/icons-material/Subway';
 import InfoIcon from '@mui/icons-material/Info';
+import Popover from '@mui/material/Popover';
 
 
 
@@ -79,7 +80,9 @@ const bull = (
       <Divider>
         
       <CardActions>
-        <Link href="https://www.cbtu.gov.br/index.php/pt/belo-horizonte/"  underline="none">Acessar o site</Link>
+        <Link href="https://www.cbtu.gov.br/index.php/pt/belo-horizonte/"  underline="hover"
+        >Acessar o site</Link>
+
       
         
       </CardActions>
@@ -134,7 +137,7 @@ const bull = (
 
 
 
-export default class Inicio extends Component{
+export default class Inicio extends Component {
    
 
 
@@ -218,9 +221,24 @@ export default class Inicio extends Component{
    {/* </ScrollView> */} 
 
 
+        <View>
+        <div style={{width: '100%'}}>
+          <Box component="span" sx={{display: 'block', p: 1, m: 1,}}>
+
+
+        
+
+
+
+
+
+      </Box>
+                    </div>
+
+
+        </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-
-
+          
         <Fab size="small" color="primary" aria-label="add">
       <SubwayIcon />
       </Fab>
@@ -237,19 +255,14 @@ export default class Inicio extends Component{
       <Fab size="small" color="primary" aria-label="add">
       <AccessAlarmIcon/>
       </Fab>
-
-
-
-
-
-
-
-
-        </View>
+          
+          
+          </View>
 
         <View style={{alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{width: '100%'}}>
+        <Box component="span" sx={{display: 'block', p: 1, m: 1,}}>
 
-        
 
 
         
@@ -278,11 +291,25 @@ export default class Inicio extends Component{
           <Typography><Ionicons name="subway" style={styles.iconred} size={20}></Ionicons>
            Estação Carlos Prates - Fluxo intenso
           </Typography>
-        
+
+           <Typography><Ionicons name="subway" style={styles.iconred} size={20}></Ionicons>
+           Estação Minas Shopping - Fluxo intenso
+          </Typography>
+
+           <Typography><Ionicons name="subway" style={styles.icon} size={20}></Ionicons>
+           Estação Floramar - Operação Normal
+          </Typography>
+
+           <Typography><Ionicons name="subway" style={styles.iconred} size={20}></Ionicons>
+           Estação Gameleira - Fluxo intenso
+          </Typography>        
         </AccordionDetails>
       </Accordion>
       
-        
+
+      </Box>
+        </div>
+
       </View>
 
        

@@ -27,7 +27,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CardMedia from '@mui/material/CardMedia';
 import Link from '@mui/material/Link';
 import CssBaseline from '@mui/material/CssBaseline';
-
+import Fab from '@mui/material/Fab';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import AddIcon from '@mui/icons-material/Add';
+import Container from '@mui/material/Container';
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
+import SubwayIcon from '@mui/icons-material/Subway';
+import InfoIcon from '@mui/icons-material/Info';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -35,7 +41,7 @@ import '@fontsource/roboto/700.css';
 
 
 import { Divider } from 'react-native-elements';
-import { FAB } from 'react-native-paper';
+
 import { createStackNavigator } from '@react-navigation/stack';
 
 const {width} = Dimensions.get("screen") ;
@@ -62,9 +68,9 @@ const bull = (
         </Typography>
         <CardMedia
         component="img"
-        height="220"
+         height="130"
         weight="150"
-        image="assets\1984.png"
+        image="https://www.cbtu.gov.br/images/banners/slide1.jpg"
         
       />
 
@@ -73,8 +79,9 @@ const bull = (
        
       </CardContent>
       <Divider>
+        
       <CardActions>
-        <Link href="https://www.cbtu.gov.br/index.php/pt/belo-horizonte/" color="inherit" underline="none">Acessar o site</Link>
+        <Link href="https://www.cbtu.gov.br/index.php/pt/belo-horizonte/"  underline="none">Acessar o site</Link>
       
         
       </CardActions>
@@ -90,32 +97,32 @@ const bull = (
   );
 
 
-  const card2 = (
-    <React.Fragment>
-      <CardContent style={{borderRadius: 25}}>
+ // const card2 = (
+  //  <React.Fragment>
+   //   <CardContent style={{borderRadius: 25}}>
        
-        <Typography variant="h5" component="div">
-        Missão
-        </Typography>
-        <CardMedia
-        component="img"
-        height="220"
-        weight="150"
-        image="assets\1984.png"
+   //     <Typography variant="h5" component="div">
+    //    Missão
+     //   </Typography>
+     //   <CardMedia
+     //   component="img"
+      //  height="130"
+       // weight="150"
+      //  image="https://www.cbtu.gov.br/images/banners/slide4.jpg"
         
-      />
+     // />
 
 
 
        
-      </CardContent>
-      <Divider>
-      <CardActions>
-        <Link href="https://www.cbtu.gov.br/index.php/pt/a-cbtu/a-companhia/missao-visao-valores-objetivos" color="inherit" underline="none">Acessar o site</Link>
+    //  </CardContent>
+    //  <Divider>
+    //  <CardActions>
+     //   <Link href="https://www.cbtu.gov.br/index.php/pt/a-cbtu/a-companhia/missao-visao-valores-objetivos"  underline="none">Acessar o site</Link>
       
         
-      </CardActions>
-      </Divider>
+     // </CardActions>
+     // </Divider>
 
 
       
@@ -123,8 +130,8 @@ const bull = (
 
 
 
-    </React.Fragment>
-  );
+   // </React.Fragment>
+  //);
 
 
 
@@ -134,7 +141,7 @@ export default class Inicio extends Component{
 
 
 
-
+  
 
 
 
@@ -149,20 +156,22 @@ export default class Inicio extends Component{
 
 
       return (
+
+        <React.Fragment>
+       <Container fixed>
+
+      
+
+        
           
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
 
                     <Text style={styles.font}>Seja Bem-vindo(a)</Text>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 
-        <FAB
-    style={styles.fab}
-    color='#3562c4'
-    icon="camera"
-    
-    
-    onPress={() => console.log('Pressed')}
-  /> 
+
+
+       
 
 
 
@@ -181,7 +190,7 @@ export default class Inicio extends Component{
         <View style={{width, height}}>
        {/* <ProgressBar progress={1} color={Colors.red800} />*/}
 
-       <ScrollView  pagingEnabled horizontal style={{borderRadius: 15}}> 
+    {/*   <ScrollView  pagingEnabled horizontal style={{borderRadius: 15}}>  */}
 
         
 
@@ -212,58 +221,35 @@ export default class Inicio extends Component{
 
         </View>
 
-        <View>
+  {  /*    <View>
         <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card2}</Card>
     </Box>
         </View>
 
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-      </ScrollView> 
+  */}
+   {/* </ScrollView> */} 
 
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 
 
-        <FAB
-    style={styles.fab}
-    color='#3562c4'
-    icon="help"
-    
-    
-  
-         /> 
-         <FAB
-            style={styles.fab}
-            color='#3562c4'
-            icon="map"
-           
-            />
+        <Fab size="small" color="primary" aria-label="add">
+      <SubwayIcon />
+      </Fab>
 
 
 
-        <FAB
-            style={styles.fab}
-            color="#3562c4"
-            icon="clock-time-nine"
-    
-          
-            />
+      <Fab size="small" color="primary" aria-label="add">
+      <InfoIcon/>
+      </Fab>
 
 
+
+
+      <Fab size="small" color="primary" aria-label="add">
+      <AccessAlarmIcon/>
+      </Fab>
 
 
 
@@ -276,11 +262,10 @@ export default class Inicio extends Component{
 
         <View style={{alignItems: 'center', justifyContent: 'center'}}>
 
-        <Button title="Ir para as Linhas"
-        onPress={() => {navigation.navigate('Linhas');}}/>
+        
 
 
-        </View>
+        
 
 
        
@@ -299,15 +284,19 @@ export default class Inicio extends Component{
          
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-           aoba
+          <Typography><Ionicons name="subway" style={styles.icon} size={20}></Ionicons>
+           Estação Eldorado - Operação Normal
+          </Typography>
+
+          <Typography><Ionicons name="subway" style={styles.iconred} size={20}></Ionicons>
+           Estação Carlos Prates - Fluxo intenso
           </Typography>
         
         </AccordionDetails>
       </Accordion>
       
         
-        
+      </View>
 
        
 
@@ -316,9 +305,8 @@ export default class Inicio extends Component{
 
 
         </View>
-
-
-        
+        </Container>
+        </React.Fragment>
       );
   }
 }
@@ -341,13 +329,22 @@ const styles = StyleSheet.create({
       margin: 5,
 
     },
+
+    iconred: {
+      
+      color: '#e32012',
+      height: 40,
+      margin: 5,
+
+    },
     stretch: {
         width: 200,
         height: 200,
         resizeMode: 'stretch'
       },
     font: {
-        fontWeight: 'bold'  
+        fontWeight: 'bold',
+        fontSize: 25 
     },
     card: {
         borderRadius:50

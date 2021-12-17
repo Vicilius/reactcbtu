@@ -21,7 +21,7 @@ const Tab = createBottomTabNavigator();
 
 import teste from './src/Telas/teste';
 import Inicio from './src/Telas/Inicio';
-//import Ajuda from './src/Telas/Ajuda';
+import Ajuda from './src/Telas/Ajuda';
 import Compartilhe from './src/Telas/Compartilhe';
 import Estacoes from './src/Telas/Estacoes';
 import Horario from './src/Telas/Horario';
@@ -137,29 +137,10 @@ function MyDrawer() {
       
       />
     
-     {/*<Drawer.Screen name="Ajuda" component={Ajuda} 
-      
-      options={{
-        title: 'Ajuda',
-        drawerIcon: ({focused, size}) => (
-           <Ionicons
-              name="help-sharp"
-              size={size}
-              color={focused ? '#4c8a36' : '#ccc'} 
-              />
-
-              ),
-        }}
-
-      
-      
-      
-      
-      
-      />
+    
 
 
-      */}
+      
 
       <Drawer.Screen name="Linhas Disponíveis" component={Linhas} 
       
@@ -182,6 +163,36 @@ function MyDrawer() {
       
       
       />
+
+
+
+<Drawer.Screen name="Ajuda" component={Ajuda} 
+      
+      options={{
+        title: 'Ajuda',
+        drawerIcon: ({focused, size}) => (
+           <Ionicons
+              name="help-sharp"
+              size={size}
+              color={focused ? '#4c8a36' : '#ccc'} 
+              />
+
+              ),
+        }}
+
+      
+      
+      
+      
+      
+      />
+
+
+
+
+
+
+
       <Drawer.Screen name="Compartilhe o app" component={Compartilhe} 
       
       options={{

@@ -65,6 +65,7 @@ const bull = (
         <Typography variant="h5" component="div">
         Ultimas Noticias da CBTU
         </Typography>
+        
         <CardMedia
         component="img"
          height="130"
@@ -96,50 +97,7 @@ const bull = (
 
     </React.Fragment>
   );
-
-
- // const card2 = (
-  //  <React.Fragment>
-   //   <CardContent style={{borderRadius: 25}}>
-       
-   //     <Typography variant="h5" component="div">
-    //    Missão
-     //   </Typography>
-     //   <CardMedia
-     //   component="img"
-      //  height="130"
-       // weight="150"
-      //  image="https://www.cbtu.gov.br/images/banners/slide4.jpg"
-        
-     // />
-
-
-
-       
-    //  </CardContent>
-    //  <Divider>
-    //  <CardActions>
-     //   <Link href="https://www.cbtu.gov.br/index.php/pt/a-cbtu/a-companhia/missao-visao-valores-objetivos"  underline="none">Acessar o site</Link>
-      
-        
-     // </CardActions>
-     // </Divider>
-
-
-      
-
-
-
-
-   // </React.Fragment>
-  //);
-
-
-
-
 export default class Inicio extends Component {
-   
-
 
 
   
@@ -150,8 +108,7 @@ export default class Inicio extends Component {
     
   render () {
 
-    
-
+   
 
       return (
 
@@ -163,12 +120,17 @@ export default class Inicio extends Component {
         
           
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
+       
         <div style={{width: '100%'}}>
           <Box component="span" sx={{display: 'block', p: 1, m: 1,}}>
 
           
+            
         
                     <Text style={styles.font}>Seja Bem-vindo(a)</Text>
+                 
+
+        
                     </Box>
                     </div>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -202,6 +164,7 @@ export default class Inicio extends Component {
         
 
         <View>
+       
 
         <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
@@ -238,6 +201,7 @@ export default class Inicio extends Component {
 
         </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          
           
         <Fab size="small" color="primary" aria-label="add">
       <SubwayIcon />

@@ -2,16 +2,34 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 import Modal from '@mui/material/Modal';
 import { View, Text, ScrollView, Image} from 'react-native';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { Dimensions, StyleSheet } from 'react-native';
 import { Divider } from 'react-native-paper';
-
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 import TextField from '@mui/material/TextField';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+
+import Stack from '@mui/material/Stack';
+// or for Day.js
 
 import Autocomplete from '@mui/material/Autocomplete';
+
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
+
+
 const style = {
   position: 'absolute',
   top: '50%',
@@ -24,29 +42,55 @@ const style = {
   p: 4,
 };
 
+
+
 export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [open, setOpen ,  setOpen2, setOpen3] = React.useState(false);
+ 
+
+  const AbrirModalEstacao= () => setOpen(true);
+  const FecharModalEstacao = () => setOpen(false);
+
+  const AbrirModalCartao= () => setOpen2(true);
+  const FecharModalCartao = () => setOpen2(false);
+
+  const AbrirModalOutro= () => setOpen3(true);
+  const FecharModalOutro = () => setOpen3(false);
+
+
+
+  const [value, setValue] = React.useState(null);
+
+
+
+
+  
+  
 
   return (
+
+    
+    
     
     <div>
+       
+     
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
+          <Text style={styles.font2}>Ajuda</Text>
               <Text style={styles.font}>Selecione uma opção: </Text>
-      <Button onClick={handleOpen}  variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}>Complicações em alguma estação</Button>
+      <Button onClick={AbrirModalEstacao}  variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}  sx={{ m: 2}} >Complicações em alguma estação</Button>
         
         
-      <Button onClick={handleOpen}  variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}>Problemas com o Cartão </Button>
+      <Button variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}  sx={{ m: 2 }} >Problemas com o Cartão </Button>
       
 
       
-      <Button onClick={handleOpen}  variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}>Outro problema</Button>
+      <Button variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}  sx={{ m: 2}} >Outro problema</Button>
       
       
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={FecharModalEstacao}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -59,26 +103,68 @@ export default function BasicModal() {
           </Typography>
 
 
-          <TextField id="outlined-basic" label="Usuário" variant="filled"  sx={{ width: 300}}  />
+          <TextField id="outlined-basic" label="Seu Nome"   sx={{ width: 380, m: 2}}/>
+          <Stack component="form" noValidate spacing={3}>
+          <TextField
+        id="date"
+        label="Data"
+        type="date"
+        
+        sx={{ width: 380, m: 2 }}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+          </Stack>
+         
 
-        <TextField id="outlined-basic" label="Email"  variant="filled"  sx={{ width: 300}}  />
-
-        <TextField id="outlined-basic" label="Senha" type="password" variant="filled"  sx={{ width: 300}} />
+        
 
 
 
         <Autocomplete disablePortal
         id="1"
         options={Estacao}
-        sx={{ width: 300}}
-        renderInput={(params) => <TextField {...params} label="Estação" />}
+        sx={{ width: 380}}
+        sx={{ m: 2 }} 
+        renderInput={(params) => <TextField {...params} label="Estação com defeito" />}
         />
 
+
+          <TextareaAutosize
+          sx={{ m: 2 }} 
+          minRows={8}
+          aria-label="maximum height"
+           placeholder="Descrição do problema"
+           
+          style={{ width: 395  }}
+         />
+
+
+          <Button variant="contained" endIcon={<ArrowForwardIosOutlinedIcon />}   
+          sx={{
+            mx: 'auto',
+            bgcolor: 'primary.main',
+            color: '#fff',
+            width: 200,
+            p: 1,
+            m: 1,
+            borderRadius: 1,
+            textAlign: 'center',
+          }} >Enviar</Button>
+        
 
 
         </Box>
       </Modal>
+
+
+
+ 
+
       </View>
+
+      
     </div>
    
   );
@@ -119,8 +205,12 @@ const styles = StyleSheet.create({
       },
     font: {
         fontWeight: 'bold',
-        fontSize: 25 
+        fontSize: 15 
     },
+    font2: {
+      fontWeight: 'bold',
+      fontSize: 35 
+  },
     card: {
         borderRadius:50
     }

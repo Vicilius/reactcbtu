@@ -18,7 +18,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+
 import Typography from '@mui/material/Typography';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -35,9 +35,22 @@ import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import SubwayIcon from '@mui/icons-material/Subway';
 import InfoIcon from '@mui/icons-material/Info';
 import Popover from '@mui/material/Popover';
-
-
-
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import RestoreIcon from '@mui/icons-material/Restore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PropTypes from 'prop-types';
+import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemText from '@mui/material/ListItemText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Dialog from '@mui/material/Dialog';
+import PersonIcon from '@mui/icons-material/Person';
+import { blue } from '@mui/material/colors';
 
 import { Divider } from 'react-native-elements';
 
@@ -81,8 +94,8 @@ const bull = (
       <Divider>
         
       <CardActions>
-        <Link href="https://www.cbtu.gov.br/index.php/pt/belo-horizonte/"  underline="hover"
-        >Acessar o site</Link>
+        <Link href="https://www.cbtu.gov.br/index.php/pt/belo-horizonte/" variant="h4"  underline="hover"
+        > Acessar o site</Link>
 
       
         
@@ -97,8 +110,34 @@ const bull = (
 
     </React.Fragment>
   );
-export default class Inicio extends Component {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+export default class Inicio extends Component {
+  
 
   
 
@@ -107,8 +146,10 @@ export default class Inicio extends Component {
 
     
   render () {
+ 
+  
 
-   
+    
 
       return (
 
@@ -201,25 +242,35 @@ export default class Inicio extends Component {
 
         </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+
+       
           
           
-        <Fab size="small" color="primary" aria-label="add">
+       
+       <Fab color="primary" aria-label="add">
       <SubwayIcon />
       </Fab>
 
 
 
-      <Fab size="small" color="primary" aria-label="add">
+      <Fab color="primary" aria-label="add">
       <InfoIcon/>
       </Fab>
 
 
 
 
-      <Fab size="small" color="primary" aria-label="add">
+      <Fab  color="primary" aria-label="add">
       <AccessAlarmIcon/>
       </Fab>
-          
+       
+       
+
+
+
+
+
+
           
           </View>
 
@@ -275,6 +326,7 @@ export default class Inicio extends Component {
         </div>
 
       </View>
+      
 
        
 
@@ -285,8 +337,12 @@ export default class Inicio extends Component {
         </View>
         </Container>
         </React.Fragment>
+
+        
       );
   }
+
+  
 }
 
 

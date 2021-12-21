@@ -32,6 +32,7 @@ import Register from './src/Telas/Register'
 import { Header } from 'react-native-elements';
 import color from 'color';
 import { createStackNavigator } from '@react-navigation/stack';
+import EstacoesLinha from './src/Telas/EstacoesLinhas';
 
 <Header
   leftComponent={{ icon: 'menu', color: '##24d453', iconStyle: { color: '##24d453' } }}
@@ -55,6 +56,8 @@ function MyTabs() {
       <Tab.Screen name="Compartilhar" component={Compartilhe} />
       <Tab.Screen name="Login" component={Login} />
       <Tab.Screen name="Register" component={Register} />
+      <Tab.Screen name="EstacoesLinha" component={EstacoesLinha} />
+      
       <Tab.Screen name="teste" component={teste} />
     </Tab.Navigator>
   );
@@ -254,6 +257,30 @@ function MyDrawer() {
 
 
 
+<Drawer.Screen name="Estações em linhas" component={EstacoesLinha} 
+      
+      
+      options={{
+        title: 'Informações das Linhas',
+        
+        drawerIcon: ({focused, size}) => (
+           <Ionicons
+              name="reader-outline"
+              size={size}
+              color={focused ? '#4c8a36' : '#ccc'} 
+              />
+
+              ),
+        }}
+
+      
+      
+      
+      
+      />
+
+
+
 
 
 
@@ -306,5 +333,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'Poppins Regular'
-  }
+  },
+
+  
 });
+
